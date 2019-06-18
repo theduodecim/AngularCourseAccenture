@@ -1,0 +1,34 @@
+<p>
+  ejercicio-servicio-dolar works!
+</p>
+<button (click)="onGettingMocks()"> Get the Mocks ! </button>
+<h5 *ngIf="commingMocks">Cargando Mocks</h5>
+<p *ngIf="mocksDolarData">
+  {{this.mocksDolarData.nombre}}
+  <br>
+  Compra : {{this.mocksDolarData.compra}}
+  <br>
+  Venta : {{this.mocksDolarData.venta}}
+  <br>
+  Variacion 24 horas:<span
+    [ngStyle]="{'color': this.mocksDolarData.porcentajeVariacion24horas >= 0 ? 'lightGreen' : 'red' }">
+    {{this.mocksDolarData.porcentajeVariacion24horas}} %
+  </span>
+</p>
+<hr>
+<br>
+<button (click)="getProductionMocks()"> Get the Production Mocks ! </button>
+<h5 *ngIf="commingProdMocks">Cargando Mocks</h5>
+
+<p *ngIf="mocksDolarDataProd">
+  {{this.mocksDolarDataProd.nombre}}
+  <br>
+  Compra : {{this.mocksDolarDataProd.compra}}
+  <br>
+  Venta : {{this.mocksDolarDataProd.venta}}
+  <br>
+  Variacion 24 horas:<span
+    [ngStyle]="{'color': this.mocksDolarDataProd.porcentajeVariacion24horas >= 0 ? 'lightGreen' : 'red' }">
+    {{ this.mocksDolarDataProd.porcentajeVariacion24horas}} %
+  </span>
+</p>

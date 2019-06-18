@@ -1,0 +1,5 @@
+<p>
+  David <span *ngIf="ciudad">Vive en <span>{{ciudadName}}</span></span>
+</p>
+<p>Esconder Ciudad</p><input type="checkbox" (change)="this.ciudad ? this.ciudad = false : this.ciudad = true">
+<input type="text" [(ngModel)]="ciudadName">

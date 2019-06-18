@@ -1,0 +1,13 @@
+<p>
+  <span *ngIf="rosario">Rosario</span> <button type="button" (click)="rosario ? rosario = false : rosario = true">Borrar
+    Ciudad</button>
+</p>
+
+<ul>
+  <li *ngFor="let ciudades of ciudadesArray">
+    {{ciudades}}
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="nuevaCiudad"> <button type="button" (click)="agregarCiudad()">Agregar
+  Ciudad</button>
